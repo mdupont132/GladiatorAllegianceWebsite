@@ -7,17 +7,27 @@ const leaders = [
   {
     name: "Miriah Allamong",
     title: "President & CEO",
-    bio: "28-year security veteran and widely recognized leader in the K-9 security industry. Certified working dog handler and trainer with 20+ years in foreign conflicts alongside state and federal law enforcement and special operations teams. First female military contractor EOD Canine handler with 8 combat deployments to Afghanistan and Iraq. Native Alaskan. Her unwavering dedication to excellence is the cornerstone of Gladiator Allegiance.",
+    bio: "Native Alaskan with an extensive security background spanning over two decades. Widely recognized leader in the K-9 security industry. Certified working dog handler and trainer with 20+ years in foreign conflicts, collaborating with state and federal law enforcement and special operations teams in the global war on terror. First female military contractor EOD Canine handler with 8 combat deployments to Afghanistan and Iraq. Her unwavering dedication to excellence is the cornerstone of Gladiator Allegiance.",
   },
   {
     name: "Pete Genovese",
-    title: "President of K-9 Operations / Head Trainer",
-    bio: "K9 Master Trainer and President of the UPWDA. 18 years of police experience including 14 years in K9 roles. Specialization in special crimes street division with SWAT/HRT teams. Maryland Police Training Commission Instructor. Lead instructor for 6 in-house K9 Academies. Gun Detection Dog Program Initiator and certified K9 Handler Trainer.",
+    title: "Director of Canine Operations / Head Trainer",
+    bio: "K9 Master Trainer and President of the UPWDA. 18 years of police experience including 14 years in K9 roles. Specialization in the special crimes street division with local law enforcement and SWAT/HRT teams. Maryland Police Training Commission Instructor. Lead instructor for 6 in-house K9 Academies. Gun Detection Dog Program Initiator, Detective, and certified K9 Handler Trainer.",
   },
   {
     name: "William Parker",
     title: "Director of Vapor Wake Canine Operations",
-    bio: "50+ years of expertise in canine program development. Pioneered explosive detection programs at major airports. Transformed Amtrak's National Explosives Detection Canine Program into an industry leader managing 81 specialized detection teams. K-9 Commander for Metropolitan Washington Airport Authority. Led the U.S. Army's first explosives detection canine team in Operation Desert Shield. Provided congressional expert testimony on national security.",
+    bio: "50+ years of expertise in canine program development, administration, and training. Established pioneering explosive detection canine programs at major airports. Transformed Amtrak's National Explosives Detection Canine Program into an industry leader, managing 81 specialized detection teams. K-9 Commander for Metropolitan Washington Airport Authority. Led the U.S. Army's first explosives detection canine team in Operation Desert Shield. Deployed canines for high-profile events including national conventions and inaugurations. Certified expert in explosive detection and Vapor Wake technology. Provided congressional expert testimony on canine perimeter national security.",
+  },
+  {
+    name: "Dr. Blas Catalani, MD, MPH, FASA",
+    title: "Vice President / Medical Operations & Logistics",
+    bio: "Physician anesthesiologist with extensive expertise in trauma care, high-risk surgery, orthopedics, and perioperative pain management. Significant non-clinical experience in medical logistics, throughput optimization, business development, and technology integration. Dedicated to advancing patient care and supporting broader missions such as counter-terrorism and organizational development.",
+  },
+  {
+    name: "Max Fisher",
+    title: "Director of Government Relations",
+    bio: "Senior advisor and director of government relations for the Faith & Freedom Coalition. Experienced in investigatory research, lobbying, and consulting for political officials and organizations. Native Russian speaker with strong ties to U.S. government personnel and the Israeli Defense Force. Educates members of Congress on geopolitical matters.",
   },
 ];
 
@@ -26,7 +36,7 @@ const credentials = [
     icon: ShieldCheck,
     title: "Auburn University Partnership",
     detail:
-      "Exclusive licensing to train and deploy patented Vapor Wake Detection Canines — one of only 5 companies in the world selected for this technology.",
+      "Exclusive licensing to train and deploy patented Vapor Wake Detection Canines — one of only 3 companies that can use this technology, two of whom we are partnered with.",
   },
   {
     icon: Users,
@@ -95,7 +105,7 @@ export default function About() {
               Leadership
             </h3>
           </AnimatedSection>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {leaders.map((leader, i) => (
               <AnimatedSection key={i} delay={i * 0.1}>
                 <div className="bg-background border border-border-harsh p-8 h-full relative group hover:border-olive/30 transition-colors">
@@ -139,10 +149,10 @@ export default function About() {
         <AnimatedSection delay={0.5}>
           <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-px bg-border-harsh">
             {[
-              { value: "Integrity", desc: "Acting ethically and transparently in all business dealings" },
+              { value: "Integrity", desc: "Acting ethically and transparently in all business dealings, with accountability and following through on commitments" },
               { value: "Trust", desc: "Building positive relationships through honesty and mutual respect" },
-              { value: "Teamwork", desc: "Leveraging diverse skills and perspectives toward common goals" },
-              { value: "Passion", desc: "Unwavering commitment to our mission of protecting lives" },
+              { value: "Teamwork", desc: "Promoting collaboration and collective effort towards common goals, leveraging diverse skills and perspectives" },
+              { value: "Passion", desc: "Demonstrating enthusiasm and commitment to the organization's mission, motivating our team to excel and persevere through challenges" },
             ].map((v, i) => (
               <div key={i} className="bg-background px-8 py-8 text-center">
                 <div className="font-[var(--font-display)] text-lg font-bold text-tan uppercase">

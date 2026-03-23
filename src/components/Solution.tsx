@@ -1,14 +1,15 @@
 "use client";
 
 import AnimatedSection from "./AnimatedSection";
-import { Shield, Dog, Eye, Zap, Radio, Target, Crosshair, Bug } from "lucide-react";
+import { Shield, Dog, Eye, Zap, Radio, Target, Crosshair, Bug, Search } from "lucide-react";
+import Image from "next/image";
 
 const capabilities = [
   {
     icon: Dog,
     title: "Vapor Wake Detection",
     description:
-      "Patented technology born at Auburn University. Our VWDC teams detect explosive particles on moving targets by trailing the vapor plume — even up to two minutes after the carrier has left the area. GA is 1 of only 5 companies ever selected to train and deploy Vapor Wake canines.",
+      "Patented technology born at Auburn University. Our VWDC teams detect explosive particles on moving targets by trailing the vapor plume — even up to two minutes after the carrier has left the area. Only 3 companies can use this technology — GA is one of them.",
   },
   {
     icon: Target,
@@ -39,6 +40,12 @@ const capabilities = [
     title: "Critical Infrastructure",
     description:
       "Comprehensive security sweeps for government facilities, transit hubs, airports, energy installations, stadiums, convention centers, and other high-priority assets requiring advanced threat screening.",
+  },
+  {
+    icon: Search,
+    title: "Bedbug Detection",
+    description:
+      "Specially trained K-9 units that swiftly identify and address bedbug infestations in residential, commercial, and government-owned properties. Fast, accurate, and non-invasive detection services.",
   },
   {
     icon: Bug,
@@ -81,7 +88,7 @@ export default function Solution() {
           </p>
         </AnimatedSection>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {capabilities.map((cap, i) => (
             <AnimatedSection key={i} delay={i * 0.06}>
               <div className="group relative bg-concrete border border-border-harsh p-7 hover:border-olive/40 transition-all h-full">
@@ -114,7 +121,7 @@ export default function Solution() {
               {[
                 { name: "TSA", full: "Transportation Security Administration" },
                 { name: "NYPD", full: "New York City Police Department" },
-                { name: "U.S. Capitol Police", full: "Washington D.C." },
+                { name: "Capitol Police", full: "Washington D.C. Capitol Police" },
                 { name: "AMTRAK", full: "National Rail Security" },
                 { name: "DOD", full: "Department of Defense" },
                 { name: "ATF", full: "Alcohol, Tobacco & Firearms" },
@@ -125,7 +132,6 @@ export default function Solution() {
                 { name: "USDA", full: "Dept. of Agriculture" },
                 { name: "IRS", full: "Internal Revenue Service" },
                 { name: "IDF", full: "Israeli Defense Force" },
-                { name: "DEA", full: "Drug Enforcement Admin." },
               ].map((agency, i) => (
                 <div
                   key={i}
@@ -142,6 +148,27 @@ export default function Solution() {
                   </span>
                 </div>
               ))}
+            </div>
+
+            {/* K-9 Operations photo — under Trusted By */}
+            <div className="relative mt-10 overflow-hidden border border-border-harsh">
+              <Image
+                src="/k9-operations.png"
+                alt="K-9 handler with detection dog deployed alongside Maryland State Police helicopter"
+                width={1920}
+                height={1080}
+                className="w-full h-56 md:h-72 object-cover object-bottom"
+                quality={100}
+                unoptimized
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/50 via-transparent to-background/20" />
+              <div className="absolute bottom-4 left-5 z-20">
+                <span className="font-[var(--font-mono)] text-[10px] tracking-[0.2em] text-foreground/80 uppercase drop-shadow-lg">
+                  K-9 Rapid Deployment Operations
+                </span>
+              </div>
+              <div className="absolute top-0 left-0 w-6 h-6 border-l-2 border-t-2 border-olive/50 z-20" />
+              <div className="absolute bottom-0 right-0 w-6 h-6 border-r-2 border-b-2 border-olive/50 z-20" />
             </div>
           </div>
         </AnimatedSection>

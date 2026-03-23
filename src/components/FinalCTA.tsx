@@ -40,17 +40,20 @@ export default function FinalCTA() {
         </AnimatedSection>
 
         <AnimatedSection delay={0.2}>
-          <p className="text-foreground-muted text-lg md:text-xl max-w-2xl mx-auto leading-relaxed mb-12">
+          <p className="text-foreground-muted text-lg md:text-xl max-w-2xl mx-auto leading-relaxed mb-6">
             Every day without elite K-9 capability is a day your perimeter has
             holes. Let&apos;s discuss how Gladiator Allegiance can integrate
             with your agency&apos;s operations — starting now.
+          </p>
+          <p className="font-[var(--font-mono)] text-xs tracking-[0.1em] text-foreground-muted mb-12">
+            Gladiator Allegiance, LLC &bull; 128 Shepherds Rest Ln, Harpers Ferry, WV 25425
           </p>
         </AnimatedSection>
 
         <AnimatedSection delay={0.3}>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="mailto:contact@gladiatorallegiance.com"
+              href="#connect-form"
               className="bg-olive hover:bg-olive-bright text-foreground font-[var(--font-display)] text-base font-semibold tracking-[0.15em] uppercase px-12 py-6 transition-colors inline-flex items-center justify-center gap-3 group"
             >
               <Shield size={18} />
@@ -61,10 +64,10 @@ export default function FinalCTA() {
               />
             </a>
             <a
-              href="tel:+1-000-000-0000"
+              href="#solution"
               className="border-2 border-foreground/20 hover:border-tan/50 text-foreground font-[var(--font-display)] text-base font-semibold tracking-[0.15em] uppercase px-12 py-6 transition-colors inline-flex items-center justify-center"
             >
-              REQUEST BRIEFING
+              VIEW CAPABILITIES
             </a>
           </div>
         </AnimatedSection>
@@ -72,9 +75,9 @@ export default function FinalCTA() {
         <AnimatedSection delay={0.4}>
           <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-px bg-border-harsh max-w-2xl mx-auto">
             {[
-              { label: "Response Time", value: "< 24 HRS" },
-              { label: "Consultation", value: "CLASSIFIED" },
-              { label: "Deployment", value: "NATIONWIDE" },
+              { label: "Team Deployment", value: "7–10 DAYS" },
+              { label: "Handler Certification", value: "12 WEEKS" },
+              { label: "Operations", value: "NATIONWIDE" },
             ].map((item, i) => (
               <div key={i} className="bg-background px-6 py-4 text-center">
                 <div className="font-[var(--font-display)] text-lg font-bold text-tan">

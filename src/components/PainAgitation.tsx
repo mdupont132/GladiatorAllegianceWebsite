@@ -2,6 +2,7 @@
 
 import AnimatedSection from "./AnimatedSection";
 import { AlertTriangle, X } from "lucide-react";
+import Image from "next/image";
 
 const threats = [
   {
@@ -32,25 +33,53 @@ export default function PainAgitation() {
       <div className="absolute top-0 left-0 right-0 h-1 bg-olive" />
 
       <div className="max-w-5xl mx-auto px-8">
-        <AnimatedSection>
-          <div className="flex items-center gap-3 mb-4">
-            <AlertTriangle size={16} className="text-tan" />
-            <span className="font-[var(--font-mono)] text-xs tracking-[0.3em] text-tan uppercase">
-              Threat Assessment
-            </span>
-          </div>
-          <h2 className="font-[var(--font-display)] text-4xl md:text-5xl lg:text-6xl font-bold uppercase leading-[0.95] tracking-tight mb-4">
-            Your Perimeter<br />
-            <span className="text-tan">Has Blind Spots.</span>
-          </h2>
-          <p className="text-foreground-muted text-lg max-w-2xl mb-20">
-            Millions of Americans attend large outdoor and indoor events each year.
-            The cost of a security failure isn&apos;t just monetary — it&apos;s the
-            loss of life, the loss of freedoms, and the loss of feeling safe inside
-            our own borders.
-          </p>
-        </AnimatedSection>
+        {/* Title + Plume photo side by side */}
+        <div className="grid md:grid-cols-2 gap-10 items-center mb-20">
+          <AnimatedSection>
+            <div className="flex items-center gap-3 mb-4">
+              <AlertTriangle size={16} className="text-tan" />
+              <span className="font-[var(--font-mono)] text-xs tracking-[0.3em] text-tan uppercase">
+                Threat Assessment
+              </span>
+            </div>
+            <h2 className="font-[var(--font-display)] text-4xl md:text-5xl lg:text-6xl font-bold uppercase leading-[0.95] tracking-tight mb-4">
+              Your Perimeter<br />
+              <span className="text-tan">Has Blind Spots.</span>
+            </h2>
+            <p className="text-foreground-muted text-lg max-w-2xl">
+              Millions of Americans attend large outdoor and indoor events each year.
+              The cost of a security failure isn&apos;t just monetary — it&apos;s the
+              loss of life, the loss of freedoms, and the loss of feeling safe inside
+              our own borders.
+            </p>
+          </AnimatedSection>
 
+          {/* Full vapor plume photo */}
+          <AnimatedSection delay={0.15}>
+            <div className="relative border border-border-harsh overflow-hidden">
+              <Image
+                src="/vapor-wake.png"
+                alt="Vapor Wake thermal plume detection — scent trail from moving target"
+                width={800}
+                height={800}
+                className="w-full h-auto"
+                style={{ filter: "hue-rotate(170deg) saturate(0.15) brightness(0.5) contrast(1.2)" }}
+                quality={100}
+                unoptimized
+              />
+              <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-concrete/40" />
+              <div className="absolute bottom-4 left-4 z-20">
+                <span className="font-[var(--font-mono)] text-[9px] tracking-[0.2em] text-olive-bright uppercase">
+                  Vapor Wake — Thermal Plume Detection
+                </span>
+              </div>
+              <div className="absolute top-0 left-0 w-5 h-5 border-l-2 border-t-2 border-olive/50 z-20" />
+              <div className="absolute bottom-0 right-0 w-5 h-5 border-r-2 border-b-2 border-olive/50 z-20" />
+            </div>
+          </AnimatedSection>
+        </div>
+
+        {/* Threat cards — full width below */}
         <div className="grid md:grid-cols-2 gap-px bg-border-harsh">
           {threats.map((threat, i) => (
             <AnimatedSection key={i} delay={i * 0.1}>

@@ -77,20 +77,20 @@ export default function Hero() {
             </motion.div>
           </div>
 
-          {/* Right — Logo with paw print */}
+          {/* Right — Logo only */}
           <motion.div
             initial={{ opacity: 0, scale: 0.85 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.6 }}
             className="lg:col-span-5 hidden lg:flex items-center justify-center relative"
           >
-            {/* Large K-9 paw print behind logo */}
-            <div className="absolute inset-0 flex items-center justify-center">
+            {/* K-9 paw print behind logo */}
+            <div className="absolute inset-0 flex items-center justify-center translate-y-4">
               <img
                 src="/paw.svg"
                 alt=""
-                className="w-[520px] h-[520px] opacity-[0.07]"
-                style={{ filter: "brightness(0) invert(0.35) sepia(1) saturate(0.5) hue-rotate(50deg)" }}
+                className="w-[420px] h-[420px] opacity-[0.06]"
+                style={{ filter: "brightness(0) invert(0.30) sepia(1) saturate(0.6) hue-rotate(50deg)" }}
               />
             </div>
             <div className="relative w-72 h-72">

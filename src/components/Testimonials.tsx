@@ -5,47 +5,47 @@ import { Shield, CheckCircle } from "lucide-react";
 
 const pastPerformance = [
   {
-    program: "TSA Passenger Screening Canine Program",
+    program: "TSA Pilot Passenger Screening Canine Program",
     client: "Transportation Security Administration",
     description:
-      "Selected as a prime contractor for TSA's Passenger Screening Canine (PSC) Program — deploying Vapor Wake detection teams across major U.S. airports and transit hubs. Teams screen hundreds of passengers per hour without disrupting pedestrian flow, detecting explosive materials on moving targets.",
+      "Our VWDC management and trainers were instrumental in the startup of TSA's Pilot Passenger Screening Canine Program, bringing a wealth of knowledge on the background, development, and delivery of Vapor Wake technology. TSA remains a key detection canine client.",
     highlights: [
-      "Vapor Wake teams deployed at Tier 1 airports nationwide",
-      "Continuous operations with 24/7 readiness posture",
-      "One of only 5 companies selected for Vapor Wake deployment",
+      "Instrumental in the startup of TSA's Passenger Screening Canine Program",
+      "Vapor Wake detection teams supporting airport and transit security",
+      "Ongoing support to DHS Transportation Security Administration",
     ],
   },
   {
-    program: "NYPD Counter-Terrorism Bureau",
+    program: "NYPD Counter-Terrorism Unit",
     client: "New York City Police Department",
     description:
-      "Provided specialized detection canine teams to support NYPD's Counter-Terrorism operations across New York City. Integrated body-worn K-9 teams into high-density environments including transit systems, landmarks, and large-scale public events.",
+      "NYPD's Counter-Terrorism Unit teamed up with Vapor Wake to assist the city with its plan to significantly increase its VWDC capabilities over the next five years. NYPD is a key detection canine client utilizing our body-worn K-9 program.",
     highlights: [
-      "Body-worn K-9 teams operating in Times Square & transit hubs",
-      "Integration with NYPD's counter-terrorism command structure",
-      "Real-time threat detection in the nation's highest-traffic city",
+      "Partnership with NYPD Counter-Terrorism Unit",
+      "Five-year plan to significantly increase VWDC capabilities",
+      "Body-worn K-9 teams integrated into city-wide counter-terrorism operations",
     ],
   },
   {
-    program: "Amtrak National Rail Security",
-    client: "Amtrak / National Railroad Passenger Corporation",
+    program: "Amtrak National Explosives Detection",
+    client: "Amtrak Police Department",
     description:
-      "Contracted to transform Amtrak's canine detection program with Vapor Wake and explosive detection teams deployed across the national rail network. Delivered rapid deployment capability with certified teams mobilized within days of contract award.",
+      "Transformed Amtrak's National Explosives Detection Canine Program into an industry leader. Our Director of Vapor Wake Operations managed 81 specialized detection teams across the national rail network and developed advanced Vapor Wake certification training for Amtrak.",
     highlights: [
-      "Nationwide rail system coverage across multiple corridors",
-      "Program transformation from legacy to Vapor Wake methodology",
-      "Rapid deployment — teams on-site within 7–10 days of award",
+      "Transformed Amtrak's program into an industry leader",
+      "Managed 81 specialized detection teams nationwide",
+      "Developed advanced Vapor Wake certification training for Amtrak",
     ],
   },
   {
-    program: "U.S. Capitol Police & Federal Facilities",
-    client: "U.S. Capitol Police / Federal Protective Service",
+    program: "Washington D.C. Capitol Police",
+    client: "U.S. Capitol Police",
     description:
-      "Deployed detection canine teams to secure federal facilities in the National Capital Region, including support for U.S. Capitol Police operations. Teams provide explosive and firearm detection screening for government buildings, special events, and VIP movements.",
+      "Washington D.C. Capitol Police is a key detection canine client utilizing Vapor Wake and Kinetic Person-Born detection teams. Our team provides explosive and firearm detection capabilities with Top Secret cleared handlers for federal facility security.",
     highlights: [
-      "Screening operations at federal buildings & government sites",
-      "Special event security for high-profile national events",
-      "Top Secret cleared handlers integrated into federal operations",
+      "Key Vapor Wake detection canine client",
+      "All handlers hold Top Secret clearance",
+      "Explosive and firearm detection for federal facilities",
     ],
   },
 ];

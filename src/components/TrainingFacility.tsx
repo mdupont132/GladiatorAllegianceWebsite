@@ -2,6 +2,7 @@
 
 import AnimatedSection from "./AnimatedSection";
 import { MapPin, Target, Shield, Users, Crosshair, ArrowRight } from "lucide-react";
+import Image from "next/image";
 
 const facilityHighlights = [
   { icon: MapPin, label: "172 Acres of Training Land" },
@@ -84,12 +85,40 @@ export default function TrainingFacility() {
           </h2>
           <p className="text-foreground-muted text-lg max-w-3xl mb-10">
             The International Special Operations K9 Training Academy (ISOK) is
-            our state-of-the-art, multi-acre training center — one of the largest
-            commercial canine and tactical training facilities in the United States.
-            ISOK provides comprehensive training solutions for government,
-            commercial, and industry partners in the evolving field of security and
-            counterterrorism.
+            our state-of-the-art training center located in Harpers Ferry, WV and
+            Safford, VA — one of the largest commercial canine and tactical
+            training facilities in the United States. ISOK provides comprehensive
+            training solutions for government, commercial, and industry partners
+            in the evolving field of security and counterterrorism.
           </p>
+        </AnimatedSection>
+
+        {/* Facility aerial photo */}
+        <AnimatedSection delay={0.05}>
+          <div className="relative mb-14 border border-olive/30 rounded-sm bg-background flex justify-center overflow-hidden">
+            {/* Crop right white edge with negative margin, contain at native aspect ratio */}
+            <div className="relative w-full overflow-hidden" style={{ clipPath: "inset(0 1% 0 0)" }}>
+              <Image
+                src="/isok-facility.png"
+                alt="ISOK Training Academy — 172 acre facility aerial view"
+                width={447}
+                height={238}
+                className="w-full h-auto"
+                style={{ filter: "contrast(1.08) saturate(1.1) brightness(1.02)" }}
+                quality={100}
+                unoptimized
+              />
+            </div>
+            <div className="absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-transparent z-10" />
+            <div className="absolute bottom-4 left-5 z-20 flex items-center gap-3">
+              <div className="w-8 h-px bg-olive-bright" />
+              <span className="font-[var(--font-mono)] text-[11px] tracking-[0.2em] text-foreground/90 uppercase drop-shadow-lg">
+                ISOK Training Academy — Harpers Ferry, WV
+              </span>
+            </div>
+            <div className="absolute top-0 left-0 w-8 h-8 border-l-2 border-t-2 border-olive/60 z-20" />
+            <div className="absolute bottom-0 right-0 w-8 h-8 border-r-2 border-b-2 border-olive/60 z-20" />
+          </div>
         </AnimatedSection>
 
         {/* Facility highlights strip */}

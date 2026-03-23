@@ -58,17 +58,24 @@ export default function Footer() {
               Contact
             </h4>
             <div className="space-y-3">
-              <a
-                href="mailto:contact@gladiatorallegiance.com"
-                className="block font-[var(--font-mono)] text-xs tracking-[0.1em] text-foreground-muted hover:text-tan transition-colors"
-              >
-                contact@gladiatorallegiance.com
-              </a>
-              <div className="flex items-center gap-2 mt-4">
-                <Shield size={14} className="text-olive-bright" />
-                <span className="font-[var(--font-mono)] text-[10px] tracking-[0.2em] text-foreground-muted uppercase">
-                  Nationwide Deployment
-                </span>
+              <div className="font-[var(--font-mono)] text-xs tracking-[0.1em] text-foreground-muted leading-relaxed">
+                <p>Gladiator Allegiance, LLC</p>
+                <p>128 Shepherds Rest Ln</p>
+                <p>Harpers Ferry, WV 25425</p>
+              </div>
+              <div className="pt-2 space-y-2">
+                <div className="flex items-center gap-2">
+                  <Shield size={14} className="text-olive-bright" />
+                  <span className="font-[var(--font-mono)] text-[10px] tracking-[0.2em] text-foreground-muted uppercase">
+                    Harpers Ferry, WV &amp; Safford, VA
+                  </span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Shield size={14} className="text-olive-bright" />
+                  <span className="font-[var(--font-mono)] text-[10px] tracking-[0.2em] text-foreground-muted uppercase">
+                    Nationwide Deployment
+                  </span>
+                </div>
               </div>
             </div>
           </div>
