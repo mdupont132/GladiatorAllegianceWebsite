@@ -84,24 +84,14 @@ export default function Hero() {
             transition={{ duration: 1, delay: 0.6 }}
             className="lg:col-span-5 hidden lg:flex items-center justify-center relative"
           >
-            {/* Large paw print behind logo */}
+            {/* Large K-9 paw print behind logo */}
             <div className="absolute inset-0 flex items-center justify-center">
-              <svg
-                viewBox="0 0 512 512"
-                className="w-[500px] h-[500px] text-olive/[0.06]"
-                fill="currentColor"
-              >
-                {/* Main pad */}
-                <ellipse cx="256" cy="340" rx="95" ry="110" />
-                {/* Top left toe */}
-                <ellipse cx="150" cy="200" rx="45" ry="60" transform="rotate(-15 150 200)" />
-                {/* Top right toe */}
-                <ellipse cx="362" cy="200" rx="45" ry="60" transform="rotate(15 362 200)" />
-                {/* Inner left toe */}
-                <ellipse cx="198" cy="175" rx="38" ry="52" transform="rotate(-5 198 175)" />
-                {/* Inner right toe */}
-                <ellipse cx="314" cy="175" rx="38" ry="52" transform="rotate(5 314 175)" />
-              </svg>
+              <img
+                src="/paw.svg"
+                alt=""
+                className="w-[520px] h-[520px] opacity-[0.07]"
+                style={{ filter: "brightness(0) invert(0.35) sepia(1) saturate(0.5) hue-rotate(50deg)" }}
+              />
             </div>
             <div className="relative w-72 h-72">
               <div className="absolute inset-0 bg-olive/6 rounded-full blur-3xl scale-125" />

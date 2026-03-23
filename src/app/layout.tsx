@@ -45,24 +45,8 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${oswald.variable} ${jetbrains.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-background text-foreground font-sans relative">
-        {/* Fixed paw print watermark that stays as you scroll */}
-        <div className="fixed bottom-[-5%] right-[-3%] pointer-events-none z-0 opacity-[0.03]">
-          <svg
-            viewBox="0 0 512 512"
-            className="w-[600px] h-[600px] text-olive"
-            fill="currentColor"
-          >
-            <ellipse cx="256" cy="340" rx="95" ry="110" />
-            <ellipse cx="150" cy="200" rx="45" ry="60" transform="rotate(-15 150 200)" />
-            <ellipse cx="362" cy="200" rx="45" ry="60" transform="rotate(15 362 200)" />
-            <ellipse cx="198" cy="175" rx="38" ry="52" transform="rotate(-5 198 175)" />
-            <ellipse cx="314" cy="175" rx="38" ry="52" transform="rotate(5 314 175)" />
-          </svg>
-        </div>
-        <div className="relative z-10">
-          {children}
-        </div>
+      <body className="min-h-full flex flex-col bg-background text-foreground font-sans">
+        {children}
       </body>
     </html>
   );
