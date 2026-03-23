@@ -1,0 +1,182 @@
+@import "tailwindcss";
+
+:root {
+  --background: #1a1c18;
+  --background-light: #22251e;
+  --foreground: #d4cfc4;
+  --foreground-muted: #8a8578;
+  --olive: #4a5a2b;
+  --olive-bright: #6b7a4a;
+  --olive-dark: #2e3a1a;
+  --olive-muted: #3a4a22;
+  --steel: #2a2c26;
+  --steel-light: #3a3c34;
+  --concrete: #1e201a;
+  --concrete-light: #262822;
+  --tan: #b8a88a;
+  --tan-dark: #8a7d66;
+  --border: rgba(107, 122, 74, 0.25);
+  --border-subtle: rgba(212, 207, 196, 0.06);
+  --border-harsh: rgba(212, 207, 196, 0.12);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-background-light: var(--background-light);
+  --color-foreground: var(--foreground);
+  --color-foreground-muted: var(--foreground-muted);
+  --color-olive: var(--olive);
+  --color-olive-bright: var(--olive-bright);
+  --color-olive-dark: var(--olive-dark);
+  --color-olive-muted: var(--olive-muted);
+  --color-steel: var(--steel);
+  --color-steel-light: var(--steel-light);
+  --color-concrete: var(--concrete);
+  --color-concrete-light: var(--concrete-light);
+  --color-tan: var(--tan);
+  --color-tan-dark: var(--tan-dark);
+  --color-border: var(--border);
+  --color-border-subtle: var(--border-subtle);
+  --color-border-harsh: var(--border-harsh);
+  --font-sans: var(--font-sans);
+  --font-display: var(--font-display);
+  --font-mono: var(--font-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Brutalist utility classes */
+.brutal-border {
+  border: 2px solid var(--foreground);
+}
+
+.brutal-border-olive {
+  border: 2px solid var(--olive);
+}
+
+.brutal-block {
+  background: var(--concrete);
+  border: 1px solid var(--border-harsh);
+}
+
+/* Harsh diagonal pattern — olive tint */
+.diagonal-lines {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 4px,
+    rgba(74, 90, 43, 0.08) 4px,
+    rgba(74, 90, 43, 0.08) 5px
+  );
+}
+
+/* Industrial grid */
+.industrial-grid {
+  background-image:
+    linear-gradient(rgba(107, 122, 74, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(107, 122, 74, 0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* Noise texture overlay */
+.noise::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--olive);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--olive-bright);
+}
+
+/* Aggressive slash divider */
+.slash-divider {
+  position: relative;
+  overflow: hidden;
+}
+
+.slash-divider::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--olive);
+}
+
+/* Glitch flicker for emphasis */
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  92% { opacity: 1; }
+  93% { opacity: 0.3; }
+  94% { opacity: 1; }
+  96% { opacity: 0.5; }
+  97% { opacity: 1; }
+}
+
+.flicker {
+  animation: flicker 4s ease-in-out infinite;
+}
+
+/* Scan line effect */
+.scanlines::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.08) 2px,
+    rgba(0, 0, 0, 0.08) 4px
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Selection — olive highlight */
+::selection {
+  background: var(--olive);
+  color: var(--foreground);
+}
+
+/* Logo blending — fades black bg into site bg, removes green outer band */
+.logo-blend {
+  mix-blend-mode: lighten;
+  mask-image: radial-gradient(ellipse 65% 65% at center, white 50%, transparent 80%);
+  -webkit-mask-image: radial-gradient(ellipse 65% 65% at center, white 50%, transparent 80%);
+  filter: brightness(1.2) contrast(1.1);
+}
+
+.logo-blend-sm {
+  mix-blend-mode: lighten;
+  mask-image: radial-gradient(ellipse 70% 70% at center, white 45%, transparent 78%);
+  -webkit-mask-image: radial-gradient(ellipse 70% 70% at center, white 45%, transparent 78%);
+  filter: brightness(1.2) contrast(1.1);
+}
