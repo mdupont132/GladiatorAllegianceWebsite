@@ -77,13 +77,32 @@ export default function Hero() {
             </motion.div>
           </div>
 
-          {/* Right — Logo */}
+          {/* Right — Logo with paw print */}
           <motion.div
             initial={{ opacity: 0, scale: 0.85 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.6 }}
             className="lg:col-span-5 hidden lg:flex items-center justify-center relative"
           >
+            {/* Large paw print behind logo */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              <svg
+                viewBox="0 0 512 512"
+                className="w-[500px] h-[500px] text-olive/[0.06]"
+                fill="currentColor"
+              >
+                {/* Main pad */}
+                <ellipse cx="256" cy="340" rx="95" ry="110" />
+                {/* Top left toe */}
+                <ellipse cx="150" cy="200" rx="45" ry="60" transform="rotate(-15 150 200)" />
+                {/* Top right toe */}
+                <ellipse cx="362" cy="200" rx="45" ry="60" transform="rotate(15 362 200)" />
+                {/* Inner left toe */}
+                <ellipse cx="198" cy="175" rx="38" ry="52" transform="rotate(-5 198 175)" />
+                {/* Inner right toe */}
+                <ellipse cx="314" cy="175" rx="38" ry="52" transform="rotate(5 314 175)" />
+              </svg>
+            </div>
             <div className="relative w-72 h-72">
               <div className="absolute inset-0 bg-olive/6 rounded-full blur-3xl scale-125" />
               <div className="relative z-10 w-full h-full logo-blend">
